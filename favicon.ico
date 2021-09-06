@@ -1,0 +1,1135 @@
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+ 70  README.md 
+@@ -0,0 +1,70 @@
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 16,515  package-lock.json 
+Large diffs are not rendered by default.
+
+ 42  package.json 
+@@ -0,0 +1,42 @@
+{
+  "name": "hostel-booking-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+ BIN +3.78 KB public/favicon.ico 
+Binary file not shown.
+ 44  public/index.html 
+@@ -0,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <script src="https://kit.fontawesome.com/651b793911.js" crossorigin="anonymous"></script>
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+ BIN +5.22 KB public/logo192.png 
+Binary file not shown.
+ BIN +9.44 KB public/logo512.png 
+Binary file not shown.
+ 25  public/manifest.json 
+@@ -0,0 +1,25 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+ 3  public/robots.txt 
+@@ -0,0 +1,3 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+ 38  src/App.css 
+@@ -0,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ 35  src/App.js 
+@@ -0,0 +1,35 @@
+import logo from './logo.svg';
+import './App.css';
+import Topbar from './Topbar';
+import SuccessPage from './SuccessPage';
+import Homepage from './Homepage';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import LoginPage from './LoginPage';
+import React from 'react';
+import { ReactReduxContext } from 'react-redux';
+import Mainpage from './Mainpage';
+import ChooseGender from './ChooseGender';
+import ChooseHostel from './ChooseHostel';
+import ChooseFloor from './ChooseFloor';
+
+class App extends React.Component{
+  render(){
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Switch>
+            <Route exact path={"/login"} component={LoginPage}/>
+            <Route path={'/main'} component={Mainpage}/>
+            <Route path={'/gender'} component={ChooseGender}/>
+            <Route path={'/hostel'} component={ChooseHostel}/>
+            <Route path={'/floor'} component={ChooseFloor}/>
+            <Route path={'/success'} component={SuccessPage}/>
+            <Route path={'/'} component={Homepage}/>
+          </Switch>
+        </div>
+      </BrowserRouter>
+    )
+  }
+}
+
+export default App;
+ 8  src/App.test.js 
+@@ -0,0 +1,8 @@
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+ 44  src/ChooseFloor.js 
+@@ -0,0 +1,44 @@
+
+import { render } from '@testing-library/react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Classes from './ChooseFloor.module.css';
+import Topbar from './Topbar';
+
+class ChooseFloor extends React.Component{
+    state = {
+        showBookBtn : false
+    }
+    room = [1,2,3,4,5,6,7,8,9,10];
+    onbtnClick = () =>{
+        this.setState({showBookBtn : true});
+    }
+    render(){
+        var buttonGenerate = this.room.map((item,index) =>{
+            return <button onClick={()=> this.onbtnClick()} className={Classes.btn} key={index}>{item}</button>
+        });
+        return (
+            <div>
+                <Topbar/>
+                <div className={Classes.container}>
+                    <h1 className={Classes.mainheading}>Choose a Floor</h1>
+                    <select className={Classes.option}>
+                        <option value="1">Floor 1</option>
+                        <option value="1">Floor 2</option>
+                        <option value="1">Floor 3</option>
+                    </select>
+                    <div className={Classes.choiceWrapper}>
+                        {buttonGenerate}
+                    </div>
+                </div>
+                <div>
+                {
+                    this.state.showBookBtn ? <Link to={'/success'}><button className={Classes.bookBtn}>Book Room</button></Link>
+                    : null
+                }
+                </div>
+            </div>
+        )
+    }
+}
+export default ChooseFloor; 
+ 71  src/ChooseFloor.module.css 
+@@ -0,0 +1,71 @@
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: border-box;
+}
+
+.container{
+    width : 70vw;
+    padding : 10px 20px;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    color : black;
+    border-radius : 8px;
+}
+.mainheading {
+    font-size : 24px;
+    text-align: center;
+    margin : 10px 0 20px 0;
+}
+.choiceWrapper{
+    width : 50%;
+    border : 1px solid #ccc;
+    border-radius : 8px;
+}
+.option{
+    font-size : 16px;
+    background : rgb(241, 241, 241);
+    padding : 4px 12px;
+    border-radius: 14px;
+    outline : none;
+    cursor : pointer;
+    margin : 0 0 10px 0;
+}
+.btn{
+    width : 70px;
+    height : 60px;
+    font-size : 24px;
+    padding : 2px;
+    cursor : pointer;
+    background : rgb(92, 134, 53);
+    border : none;
+    outline : none;
+    border-radius : 6px;
+    color : #fff;
+    font-weight: 600;
+    margin : 10px 20px;
+    transition : all 0.3s;
+}
+.btn:hover{
+    background: red;
+}
+.bookBtn{
+    width : 200px;
+    font-size : 20px;
+    border : none;
+    border-radius: 16px;
+    padding : 6px 12px;
+    background: rgb(26, 127, 243);
+    box-shadow: 2px 4px 4px #ccc;
+    color : #fff;
+    cursor : pointer;
+    position : absolute;
+    bottom: 20px;
+    left : 50%;
+    transform : translate(-50%,-50%);
+} 
+ 29  src/ChooseGender.js 
+@@ -0,0 +1,29 @@
+import { Link } from 'react-router-dom';
+import Classes from './ChooseGender.module.css';
+import Topbar from './Topbar';
+
+const ChooseGender = () =>{
+    return (
+        <div>
+            <Topbar/>
+            <div className={Classes.container}>
+                <h1 className={Classes.mainheading}>Choose your Hostel</h1>
+                <div className={Classes.choiceWrapper}>
+                    <div className={[Classes.choiceDiv, Classes.girlHostel].join(' ')}>
+                        <Link to={'/hostel'}>
+                        <img className={Classes.avatar} src={'https://image.freepik.com/free-vector/smiling-girl-avatar_102172-32.jpg'} alt="Girls Hostels"/>
+                        <h2 className={Classes.subheading}>Girls Hostels</h2>
+                        </Link>
+                    </div>
+                    <div className={[Classes.choiceDiv, Classes.boyHostel].join(' ')}>
+                        <Link to={'/hostel'}>
+                        <img className={Classes.avatar} src={'https://static.vecteezy.com/system/resources/thumbnails/001/503/756/small/boy-face-avatar-cartoon-free-vector.jpg'} alt="Boys Hostels"/>
+                        <h2 className={Classes.subheading}>Boys Hostels</h2>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+export default ChooseGender; 
+ 56  src/ChooseGender.module.css 
+@@ -0,0 +1,56 @@
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: border-box;
+}
+
+.container{
+    width : 70vw;
+    padding : 10px 20px;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    color : black;
+    border-radius : 8px;
+}
+.mainheading {
+    font-size : 32px;
+    text-align: center;
+    margin : 10px 0 40px 0;
+}
+.choiceWrapper{
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.choiceDiv{
+    width : 30%;
+
+    background : rgba(66, 94, 255, 0.952);
+    padding : 2em 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    cursor : pointer;
+}
+.avatar {
+    width : 100px;
+    border-radius: 50%;
+}
+.subheading {
+    margin : 10px 0;
+    font-size: 18px;
+}
+.girlHostel{
+    background-color: rgba(206, 37, 206, 0.9);
+}
+.boyHostel{
+    background-color: rgba(20, 172, 243, 0.9);
+} 
+ 21  src/ChooseHostel.js 
+@@ -0,0 +1,21 @@
+import { Link } from 'react-router-dom';
+import Classes from './ChooseHostel.module.css';
+import Topbar from './Topbar';
+
+const ChooseHostel = () => {
+    const Hostel = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6'];
+    return (
+        <div>
+        <Topbar/>
+        <div className={Classes.container}>
+            <h1 className={Classes.heading}>Choose a Hostel</h1>
+            <div className={Classes.btnWrapper}>
+                {Hostel.map((item, index) => {
+                    return <Link to={'/floor'}><button className={Classes.btn} key={index}>{item}</button></Link>
+                })}
+            </div>
+        </div>
+        </div>
+    )
+}
+export default ChooseHostel;
+ 48  src/ChooseHostel.module.css 
+@@ -0,0 +1,48 @@
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: border-box;
+}
+
+.container{
+    width : 70vw;
+    padding : 10px 20px;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    color : black;
+    border-radius : 8px;
+}
+.heading {
+    font-size : 32px;
+    text-align: center;
+    margin : 10px 0 40px 0;
+}
+.btnWrapper{
+    width : 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding : 1em 3em;
+}
+.btn{
+    width : 70px;
+    height : 60px;
+    font-size : 24px;
+    padding : 2px;
+    cursor : pointer;
+    background : rgb(82, 29, 29);
+    border : none;
+    outline : none;
+    border-radius : 6px;
+    color : #fff;
+    font-weight: 600;
+    margin : 10px 20px;
+    transition : all 0.3s;
+}
+.btn:hover{
+    background: rgb(94, 243, 48);
+} 
+ 121  src/FirebaseAuth.jsx 
+@@ -0,0 +1,121 @@
+/**
+ * Copyright 2017 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+// @flow
+
+import React from 'react';
+
+// Global ID for the element.
+const ELEMENT_ID = 'firebaseui_container';
+
+// Promise that resolves unless the FirebaseUI instance is currently being deleted.
+let firebaseUiDeletion = Promise.resolve();
+
+/**
+ * React Component wrapper for the FirebaseUI Auth widget.
+ */
+export default class FirebaseAuth extends React.Component {
+  /**
+   * Constructor  Firebase Auth UI component
+   *
+   * @param {Object} props - Additional object properties.
+   * @constructor
+   */
+  constructor(props) {
+    super(props);
+
+    this.uiConfig = props.uiConfig;
+    this.firebaseAuth = props.firebaseAuth;
+    this.className = props.className;
+    this.uiCallback = props.uiCallback;
+    this.unregisterAuthObserver = () => {};
+  }
+
+  /**
+   * @inheritDoc
+   */
+  componentDidMount() {
+    // Import the css only on the client.
+    require('firebaseui/dist/firebaseui.css');
+
+    // Firebase UI only works on the Client. So we're loading the package in `componentDidMount`
+    // So that this works when doing server-side rendering.
+    const firebaseui = require('firebaseui');
+
+    // Wait in case the firebase UI instance is being deleted.
+    // This can happen if you unmount/remount the element quickly.
+    return firebaseUiDeletion.then(() => {
+      // Get or Create a firebaseUI instance.
+      this.firebaseUiWidget = firebaseui.auth.AuthUI.getInstance()
+           || new firebaseui.auth.AuthUI(this.firebaseAuth);
+      if (this.uiConfig.signInFlow === 'popup') {
+        this.firebaseUiWidget.reset();
+      }
+
+      // We track the auth state to reset firebaseUi if the user signs out.
+      this.userSignedIn = false;
+      this.unregisterAuthObserver = this.firebaseAuth.onAuthStateChanged((user) => {
+        if (!user && this.userSignedIn) {
+          this.firebaseUiWidget.reset();
+        }
+        this.userSignedIn = !!user;
+      });
+
+      // Trigger the callback if any was set.
+      if (this.uiCallback) {
+        this.uiCallback(this.firebaseUiWidget);
+      }
+
+      // Render the firebaseUi Widget.
+      this.firebaseUiWidget.start('#' + ELEMENT_ID, this.uiConfig);
+    });
+  }
+
+  /**
+   * @inheritDoc
+   */
+  componentWillUnmount() {
+    firebaseUiDeletion = firebaseUiDeletion.then(() => {
+      this.unregisterAuthObserver();
+      return this.firebaseUiWidget.delete();
+    });
+    return firebaseUiDeletion;
+  }
+
+  /**
+   * Properties types.
+   */
+  props: {
+    // The Firebase UI Web UI Config object.
+    // See: https://github.com/firebase/firebaseui-web#configuration
+    uiConfig: Object,
+    // The Firebase App auth instance to use.
+    firebaseAuth: Object,
+    // Callback that will be passed the FirebaseUi instance before it is
+    // started. This allows access to certain configuration options such as
+    // disableAutoSignIn().
+    uiCallback?: Function,
+    className?: String,
+  };
+
+  /**
+   * @inheritDoc
+   */
+  render() {
+    return (
+      <div className={this.className} id={ELEMENT_ID}/>
+    );
+  }
+}
+ 24  src/Homepage.js 
+@@ -0,0 +1,24 @@
+import React from 'react';
+import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
+import Classes from './Homepage.module.css';
+import Topbar from './Topbar';
+
+const Homepage = () =>{
+    const onSigninClick = () =>{
+        <Redirect to={"/login"}/>
+    }
+    return (
+        <div>
+            <Topbar/>
+            <div className={Classes.container}>
+                <h1 className={Classes.heading}>Hostel Allocation</h1>
+                <h2 className={Classes.subheading}>Please sign-in</h2>
+                <Link to={'/login'}><button onClick={onSigninClick} className={Classes.googleBtn}><i className={"fab fa-google"}></i>Sign in with Google</button></Link>
+                <Link to={'/login'}><button onClick={onSigninClick} className={Classes.facebookBtn}><i className={"fab fa-facebook-square"}></i>Sign in with Facebook</button></Link>
+            </div>
+        </div>
+    )
+}
+
+export default Homepage; 
+ 67  src/Homepage.module.css 
+@@ -0,0 +1,67 @@
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: border-box;
+}
+
+.container{
+    width : 40vw;
+    padding : 10px 20px;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    color : black;
+    border-radius : 8px;
+}
+.heading{
+    font-size : 24px;
+    margin : 10px 0;
+}
+.subheading{
+    font-size : 18px;
+    font-weight : 200;
+    margin : 10px;
+}
+.googleBtn{
+    width : 200px;
+    margin : 10px 0;
+    background : #fff;
+    padding : 6px 10px;
+    border : 1px solid #ccc;
+    outline : none;
+    cursor : pointer;
+    font-size : 14px;
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 4px #ccc;
+}
+.googleBtn i{
+    margin-right : 10px;
+    font-size : 16px;
+}
+.facebookBtn{
+    width : 200px;
+    margin : 10px 0;
+    background : #4267B2;
+    padding : 6px 10px;
+    border : none;
+    outline : none;
+    cursor : pointer;
+    font-size : 14px;
+    color : #fff;
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 4px #ccc;
+}
+.facebookBtn i{
+    margin-right : 10px;
+    font-size : 16px;
+} 
+ 33  src/LoginPage.js 
+@@ -0,0 +1,33 @@
+import React from 'react';
+import { Redirect } from 'react-router';
+import Classes from './LoginPage.module.css';
+import Topbar from './Topbar';
+import { Link } from 'react-router-dom';
+
+class LoginPage extends React.Component{
+    state = {
+        userLoggedIn : false
+    }
+    loginSubmit = () =>{
+        this.setState({userLoggedIn : true});
+        <Redirect to={'/main'}/>
+    }
+    render(){
+        return(
+            <div>
+                <Topbar/>
+                <div className={Classes.container}>
+                    <form onSubmit={this.loginSubmit} className={Classes.form}>
+                        <h1 className={Classes.heading}>Login</h1>
+                        <input className={[Classes.input].join(' ')}type="text" name="" placeholder="Username"/>
+                        <input className={[Classes.input].join(' ')}type="password" name="" placeholder="Password"/>
+                        <Link to={'/main'}><input className={[Classes.input].join(' ')}type="submit" value="Submit"/></Link>
+                    </form>
+
+                </div>
+            </div>
+        )
+    }
+
+}
+export default LoginPage;        
+ 43  src/LoginPage.module.css 
+@@ -0,0 +1,43 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: content-box;
+}
+.container{
+    width : 100%;
+    height: 100%;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+.form {
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    background : rgba(45, 143, 105, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding : 2em;
+    border-radius: 8px;
+}
+.heading {
+    margin-bottom : 1em;
+    text-shadow: 2px 4px 4px #ccc;
+}
+.input{
+    margin : 10px 0;
+    padding : 8px 12px; 
+    border : none;
+    border-radius : 6px;
+    outline : none;
+}
+.input[type="submit"]{
+    width : 100px;
+    background : rgb(7, 101, 243);
+    color : #fff;
+    outline : none;
+    border : none;
+    cursor : pointer;
+}
+ 26  src/Mainpage.js 
+@@ -0,0 +1,26 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Classes from './Mainpage.module.css';
+import Topbar from './Topbar';
+
+class Mainpage extends React.Component{
+    render(){
+        return(
+            <div>
+                <Topbar/>
+                <div className={Classes.container}>
+                    <div className={Classes.contentWrapper}>
+                        <h1 className={Classes.heading}>Welcome Alvin Kumar</h1>
+                        <h2 className={Classes.message}>You have already booked a room.</h2>
+                        <h2 className={Classes.subheading}>Your room details are as follows : </h2>
+                        <p className={Classes.details}>Hostel No. <span>B4</span></p>
+                        <p className={Classes.details}>Room No.<span>8</span></p>
+                    </div>
+                    <Link to={'/gender'}><button className={Classes.btn}>Choose a new Accomodation</button></Link>
+                </div>
+            </div>
+        )
+    }
+
+}
+export default Mainpage; 
+ 54  src/Mainpage.module.css 
+@@ -0,0 +1,54 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contentWrapper{
+    border : 2px solid black;
+    width : 40%;
+    position : absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding : 1em 3em;
+    border-radius : 10px;
+    text-align: left;
+}
+.heading {
+    font-size : 28px;
+    text-align: center;
+    margin : 10px 0;
+}
+.message{
+    font-size : 18px;
+    margin : 10px 0;
+}
+.subheading {
+    font-size : 20px;
+    margin : 10px 0;
+}
+.details{
+    font-size : 16px;
+    font-weight : 600;
+    margin : 10px 0;
+}
+.details span{
+    color : red;
+    font-weight: 700;
+    margin : 0 5px;
+}
+.btn{
+    width : 400px;
+    font-size : 20px;
+    border : none;
+    border-radius: 16px;
+    padding : 6px 12px;
+    background: rgb(26, 127, 243);
+    box-shadow: 2px 4px 4px #ccc;
+    color : #fff;
+    cursor : pointer;
+    position : absolute;
+    bottom: 50px;
+    left : 50%;
+    transform : translate(-50%,-50%);
+} 
+ 21  src/SuccessPage.js 
+@@ -0,0 +1,21 @@
+import Classes from './SuccessPage.module.css';
+import Topbar from './Topbar';
+
+const SuccessPage = () =>{
+    return (
+        <div>
+        <Topbar/>
+        <div className={Classes.container}>
+            <div className={Classes.contentWrapper}>
+            <i className={`${Classes.icon} far fa-times-circle`}></i>
+                <h1 className={Classes.heading}>Success</h1>
+                <h2 className={Classes.message}>Your room has been booked successfully.</h2>
+                <h2 className={Classes.subheading}>Your room details are as follows : </h2>
+                <p className={Classes.details}>Hostel No. <span>B4</span></p>
+                <p className={Classes.details}>Room No.<span>8</span></p>
+            </div>
+        </div>
+    </div>
+    )
+}
+export default SuccessPage; 
+ 50  src/SuccessPage.module.css 
+@@ -0,0 +1,50 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contentWrapper{
+    width : 40%;
+    position : absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding : 1em 3em;
+    border-radius : 10px;
+    text-align: left;
+    background: rgba(166, 212, 228, 0.7);
+}
+.icon{
+    font-size : 36px;
+    color : red;
+    position : absolute;
+    right : 3%;
+    cursor: pointer;
+}
+.heading {
+    font-size : 28px;
+    text-align: center;
+    margin : 10px 0 20px 0;
+}
+.message{
+    font-size : 18px;
+    font-weight: 400;
+    margin : 15px 0;
+    text-align: center;
+    padding : 0 5em;
+}
+.subheading {
+    font-size : 17px;
+    font-weight: 600;
+    margin : 15px 0;
+}
+.details{
+    font-size : 15px;
+    font-weight : 600;
+    margin : 20px 0;
+}
+.details span{
+    color : red;
+    font-weight: 700;
+    margin : 0 5px;
+} 
+ 12  src/Topbar.js 
+ 24  src/Topbar.module.css 
+@@ -0,0 +1,24 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+.topbar{
+    width : 100%;
+    height: 80px;
+    box-shadow: 2px 4px 5px #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding : 0 20px;
+}
+.logo{
+    width : 50px;
+    margin : 0 10px 0 50px;
+}
+.logoText{
+    font-size : 24px;
+    font-weight: 500;;
+    margin : 0 10px;
+} 
+ 13  src/index.css 
+@@ -0,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+ 17  src/index.js 
+@@ -0,0 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+ 1  src/logo.svg 
+@@ -0,0 +1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3"><g fill="#61DAFB"><path d="M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z"/><circle cx="420.9" cy="296.5" r="45.7"/><path d="M520.5 78.1z"/></g></svg> 
+ 13  src/reportWebVitals.js 
+@@ -0,0 +1,13 @@
+const reportWebVitals = onPerfEntry => {
+  if (onPerfEntry && onPerfEntry instanceof Function) {
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(onPerfEntry);
+      getFID(onPerfEntry);
+      getFCP(onPerfEntry);
+      getLCP(onPerfEntry);
+      getTTFB(onPerfEntry);
+    });
+  }
+};
+
+export default reportWebVitals;
+ 5  src/setupTests.js 
+@@ -0,0 +1,5 @@
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things like:
+// expect(element).toHaveTextContent(/react/i)
+// learn more: https://github.com/testing-library/jest-dom
+import '@testing-library/jest-dom';
